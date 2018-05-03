@@ -1,26 +1,142 @@
 extends layout
 
 block content
-      div.top
-        form.form-horizontal(method="post", id="loginForm")
-          label Username
-          input.span3(id="username", type="text", name="User", placeholder="Enter your username")
-          label Password
-          input.span3(id="password", type="password", name="Password")
-          input.btn(type="submit", value="Log In")
-      div.container
-        div.content
-          table.table.table-striped
-            thead
-              tr
-                th Table
-                th Heading
-            tbody
-              tr
-                td Blah
-                td Test
-              tr
-                td Hello
-                td World
-
-      div.footer
+	nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+		a.navbar-brand.js-scroll-trigger(href='#page-top')
+			span.d-block.d-lg-none Bootstrap
+			span.d-none.d-lg-block
+				img.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='/images/profile.jpg' alt='')
+		button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+			span.navbar-toggler-icon
+		#navbarSupportedContent.collapse.navbar-collapse
+			ul.navbar-nav
+				li.nav-item
+					a.nav-link.js-scroll-trigger(href='#about') O mnie
+				li.nav-item
+					a.nav-link.js-scroll-trigger(href='#experience') Doświadczenie
+				li.nav-item
+					a.nav-link.js-scroll-trigger(href='#education') Nauka
+				li.nav-item
+					a.nav-link.js-scroll-trigger(href='#skills') Umiejętności
+				li.nav-item
+					a.nav-link.js-scroll-trigger(href='#interests') Zainteresowania
+				li.nav-item
+					a.nav-link.js-scroll-trigger(href='#awards') Osiągnięcia
+	.container-fluid.p-0
+		section#about.resume-section.p-3.p-lg-5.d-flex.d-column
+			.my-auto
+					h1.mb-0
+						| Kacper
+						span.text-primary Marcisz
+					.subheading.mb-5
+						| 42-200 Częstochowa &middot; 733-717-747&middot;
+						a(href='mailto:kacpermarcisz@gmail.com') kacpermarcisz@gmail.com
+					p.mb-5
+						| Jestem programistą .Net
+					ul.list-inline.list-social-icons.mb-0
+						li.list-inline-item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-facebook.fa-stack-1x.fa-inverse
+						li.list-inline-item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-twitter.fa-stack-1x.fa-inverse
+						li.list-inline-item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-linkedin.fa-stack-1x.fa-inverse
+						li.list-inline-item
+							a(href='#')
+								span.fa-stack.fa-lg
+									i.fa.fa-circle.fa-stack-2x
+									i.fa.fa-github.fa-stack-1x.fa-inverse
+		section#experience.resume-section.p-3.p-lg-5.d-flex.flex-column
+			.my-auto
+				h2.mb-5 Doświadczenie
+				.resume-item.d-flex.flex-column.flex-md-row.mb-5
+					.resume-content.mr-auto
+						h3.mb-0 .Net Developer
+						.subheading.mb-3 OnexGroup
+						p
+							| Takie tam sklepy i landing pages
+					.resume-date.text-md-right
+						span.text-primary Lipiec 2016 - obecnie
+				
+		section#education.resume-section.p-3.p-lg-5.d-flex.flex-column
+			.my-auto
+				h2.mb-5 Nauka
+				.resume-item.d-flex.flex-column.flex-md-row.mb-5
+					.resume-content.mr-auto
+						h3.mb-0 Politechnika Częstochowska
+						.subheading.mb-3 Informatyka &middot; II stopień
+						div Aplikacje Biznesowe i Bazy Danych
+					.resume-date.text-md-right
+						span.text-primary 2017 - 2018
+				.resume-item.d-flex.flex-column.flex-md-row
+					.resume-content.mr-auto
+						h3.mb-0 Politechnika Częstochowska
+						.subheading.mb-3 Informatyka &middot; II stopień
+						div Inżynieria Oprogramowania
+					.resume-date.text-md-right
+						span.text-primary 2013 - 2017
+		section#skills.resume-section.p-3.p-lg-5.d-flex.flex-column
+			.my-auto
+				h2.mb-5 Skills
+				.subheading.mb-3 Języki programowania &amp; narzędzia
+				ul.list-inline.list-icons
+					li.list-inline-item
+						i.devicons.devicons-html5
+						i.devicons.devicons-javascript
+					li.list-inline-item
+						i.devicons.devicons-jquery
+					li.list-inline-item
+						i.devicons.devicons-bootstrap
+					li.list-inline-item
+						i.devicons.devicons-npm
+					li.list-inline-item
+						i.devicons.devicons-angular
+					li.list-inline-item
+						i.devicons.devicons-csharp-plain
+					li.list-inline-item
+						i.devicons.devicons-dot-net-plain
+					li.list-inline-item
+						i.devicons.devicons-mongodb-plain
+					li.list-inline-item
+						i.devicons.devicons-oracle-original
+					li.list-inline-item
+						i.devicons.devicons-typescript-plain
+					li.list-inline-item
+						i.devicons.devicons-visualstudio
+					li.list-inline-item
+						i.devicons.devicons-windows8-original
+				.subheading.mb-3 Praca
+				ul.fa-ul.mb-0
+					li
+						i.fa-li.fa.fa-check
+						|               Git
+					li
+						i.fa-li.fa.fa-check
+						|               Tfs
+					li
+						i.fa-li.fa.fa-check
+						|               Agile &amp; Scrum
+		section#interests.resume-section.p-3.p-lg-5.d-flex.flex-column
+			.my-auto
+				h2.mb-5 Zainteresowania
+				p
+					| Sport motorowy
+				p.mb-0
+					| Motocykle
+		section#awards.resume-section.p-3.p-lg-5.d-flex.flex-column
+			.my-auto
+				h2.mb-5 Awards &amp; Certifications
+				ul.fa-ul.mb-0
+					li
+						i.fa-li.fa.fa-trophy.text-warning
+					| 1
+					sup wsze
+					|               Miejsce - Hackhaton Mobile Speed Up Warsaw
