@@ -3,6 +3,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -29,7 +31,7 @@ app.use(function(req, res, next) {
     next();
   } else{
     res.locals.logInfo = `Niezalogowany`;
-    if(req.url==='/' || req.url==='/sesja' || req.url==='/login' || req.url==='/users/reset' ) {
+    if(req.url==='/' || req.url==='/login' || req.url==='/users/reset' ) {
       next();
     } else {
       res.redirect("/login");
